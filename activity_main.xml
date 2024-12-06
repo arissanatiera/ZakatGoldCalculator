@@ -1,0 +1,130 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/pink_primary">
+
+    <!-- Toolbar (Title Bar) -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/pink_light"
+        android:titleTextColor="@color/white"
+        android:title="ZAKAT CALCULATOR"
+        app:titleTextAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- CardView container for the content -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp"
+        android:backgroundTint="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:background="@color/pink_light">
+
+            <!-- Input: Gold Weight -->
+            <EditText
+                android:id="@+id/edtWeight"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:hint="Enter Gold Weight (grams)"
+                android:inputType="numberDecimal"
+                android:layout_marginBottom="12dp"
+                android:backgroundTint="@color/pink_primary"
+                android:textColor="@color/pink_text"
+                android:textColorHint="@color/pink_text"/>
+
+            <!-- Input: Gold Type (Keep/Wear) -->
+            <Spinner
+                android:id="@+id/spinnerType"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginBottom="12dp"
+                android:backgroundTint="@color/pink_text"
+                android:popupTheme="@style/SpinnerTextWhite" />
+
+            <!-- Input: Gold Value per Gram -->
+            <EditText
+                android:id="@+id/edtGoldValue"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:hint="Enter Gold Value per Gram (RM)"
+                android:inputType="numberDecimal"
+                android:layout_marginBottom="16dp"
+                android:backgroundTint="@color/pink_primary"
+                android:textColor="@color/pink_text"
+                android:textColorHint="@color/pink_text"/>
+
+            <!-- Error Message (Invisible by default) -->
+            <TextView
+                android:id="@+id/tvErrorMessage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Please enter valid numbers for weight and value"
+                android:textColor="@color/red"
+                android:visibility="gone"
+                android:textSize="14sp"
+                android:layout_marginBottom="16dp"
+                android:textAlignment="center"/>
+
+
+            <!-- Button to Calculate -->
+            <Button
+                android:id="@+id/btnCalculate"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="Calculate Zakat"
+                android:layout_marginBottom="16dp"
+                android:backgroundTint="@color/pink_primary"
+                android:textColor="@color/white"/>
+
+            <!-- Output: Total Gold Value -->
+            <TextView
+                android:id="@+id/tvTotalValue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Total Gold Value: "
+                android:textSize="16sp"
+                android:layout_marginBottom="8dp"
+                android:textColor="@color/pink_text"
+                android:padding="8dp"/>
+
+            <!-- Output: Zakat Payable -->
+            <TextView
+                android:id="@+id/tvZakatPayable"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Zakat Payable Value: "
+                android:textSize="16sp"
+                android:layout_marginBottom="8dp"
+                android:textColor="@color/pink_text"
+                android:padding="8dp"/>
+
+            <!-- Output: Total Zakat -->
+            <TextView
+                android:id="@+id/tvTotalZakat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Total Zakat: "
+                android:textSize="16sp"
+                android:textColor="@color/pink_text"
+                android:padding="8dp"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

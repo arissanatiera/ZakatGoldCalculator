@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Zakat Estimator</string>
+
+    <!-- Spinner options -->
+    <string-array name="gold_type_array">
+        <item>Keep</item>
+        <item>Wear</item>
+    </string-array>
+
+
+    <string name="zakat_instructions">
+        1. Enter the weight of the gold in grams.\n\n
+        2. Select whether the gold is for keeping or wearing.\n\n
+        3. Enter the current value of gold per gram.\n\n
+        4. Zakat will be calculated as 2.5% of the total value of the gold.\n\n
+        5. The result will show the zakat payable for the gold.
+    </string>
+
+
+</resources>

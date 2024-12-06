@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+
+    <!-- Share option -->
+    <item
+        android:id="@+id/menu_share"
+        android:title="Share"
+        android:icon="@android:drawable/ic_menu_share"
+        app:showAsAction="ifRoom"/>
+
+    <!-- Triple Dot Overflow Menu (More options) -->
+    <item
+        android:id="@+id/menu_more"
+        android:title="More Options"
+        android:icon="@android:drawable/ic_menu_more"
+        app:showAsAction="never"/> <!-- This ensures it shows in the overflow menu -->
+
+</menu>
+
+
+
+
